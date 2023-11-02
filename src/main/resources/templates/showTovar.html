@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/text.css}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>ID</h3>
+<p th:text="${tovar.getId()}"></p>
+<h3>Цена</h3>
+<p th:text="${tovar.getPrice()}"></p>
+<h3>Количество</h3>
+<p th:text="${tovar.getKolvo()}"></p>
+<h3>Название</h3>
+<p th:text="${tovar.getName()}"></p>
+<h3>Вид</h3>
+<p th:text="${tovar.getVid()}"></p>
+
+<a th:href="@{/{id}/editTovar(id = ${tovar.getId()})}" class="button">EDIT</a><br>
+<form th:method="DELETE" th:action="@{/{id}/tovar(id = ${tovar.getId()})}"><br>
+    <input type="submit" value="DELETE">
+</form>
+
+</body>
+</html>

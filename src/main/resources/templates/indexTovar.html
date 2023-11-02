@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/text.css}">
+    <meta charset="UTF-8">
+    <title>Все товары</title>
+</head>
+<ul class="nav">
+    <li><a href="/">Главная</a></li>
+    <li><a href="indexGame">Игра</a></li>
+    <li><a href="indexPerson">Сотрудник</a></li>
+    <li><a href="indexTur">Тур</a></li>
+    <li><a href="indexHero">Герой</a></li>
+</ul>
+<body>
+  <div th:each="person: ${tovar}">
+    <a th:href="@{/{id}/tovar(id = ${person.getId()})}" th:text="${person.getName()}"></a>
+
+  </div>
+
+<a href="/newTovar">Cоздать новый товар</a>
+  <script src="/static/js/bootstrap.js"></script>
+</body>
+</html>

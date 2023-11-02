@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/edit.css}">
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/{id}/game(id = ${game.getId()})}" th:object="${game}">
+  <label for="name">Введите имя</label>
+  <input type="text" id="name" th:field="*{name}">
+  <label for="janr">Введите жанр</label>
+  <input type="text" id="janr" th:field="*{janr}">
+  <label for="novinka">Новинка?</label>
+  <input type="text" id="novinka" th:field="*{novinka}">
+  <label for="plata">Плата?</label>
+  <input type="text" id="plata" th:field="*{plata}">
+  <input type="submit" value="Update">
+</form>
+
+
+</body>
+</html>

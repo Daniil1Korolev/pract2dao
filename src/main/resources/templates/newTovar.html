@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/text.css}">
+</head>
+<body>
+<form th:method="POST" th:action="@{tovar}" th:object="${tovar}">
+  <label for="price">Введите цену</label>
+  <input type="text" id="price" th:field="*{price}">
+    <label for="kolvo">Введите кол-во</label>
+    <input type="text" id="kolvo" th:field="*{kolvo}">
+    <label for="name">Введите имя</label>
+    <input type="text" id="name" th:field="*{name}">
+    <label for="vid">Введите вид</label>
+    <input type="text" id="vid" th:field="*{vid}">
+  <input type="submit" value="Create">
+</form>
+</body>
+</html>

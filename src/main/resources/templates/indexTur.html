@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/text.css}">
+    <meta charset="UTF-8">
+    <title>Все туры</title>
+</head>
+<ul class="nav">
+    <li><a href="/">Главная</a></li>
+    <li><a href="indexGame">Игра</a></li>
+    <li><a href="indexTovar">Товар</a></li>
+    <li><a href="indexPerson">Сотрудник</a></li>
+    <li><a href="indexHero">Герой</a></li>
+</ul>
+<body>
+  <div th:each="turch: ${tur}">
+    <a th:href="@{/{id}/tur(id = ${turch.getId()})}" th:text="${turch.getName()}"></a>
+
+  </div>
+
+<a href="/newTur">Создать новый тур</a>
+  <script src="/static/js/bootstrap.js"></script>
+</body>
+</html>

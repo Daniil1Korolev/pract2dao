@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/text.css}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>ID</h3>
+<p th:text="${tur.getId()}"></p>
+<h3>Название тура</h3>
+<p th:text="${tur.getName()}"></p>
+<h3>Цена</h3>
+<p th:text="${tur.getPrice()}"></p>
+<h3>Город</h3>
+<p th:text="${tur.getCity()}"></p>
+<h3>Страна</h3>
+<p th:text="${tur.getCountry()}"></p>
+
+<a th:href="@{/{id}/editTur(id = ${tur.getId()})}" class="button">EDIT</a><br>
+
+<form th:method="DELETE" th:action="@{/{id}/tur(id = ${tur.getId()})}"><br>
+    <input type="submit" value="DELETE">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/edit.css}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/{id}/tur(id = ${tur.getId()})}" th:object="${tur}">
+  <label for="name">Введите название</label>
+  <input type="text" id="name" th:field="*{name}">
+    <label for="price">Введите цену</label>
+    <input type="text" id="price" th:field="*{price}">
+    <label for="city">Введите Город</label>
+    <input type="text" id="city" th:field="*{city}">
+    <label for="country">Введите Страну</label>
+    <input type="text" id="country" th:field="*{country}">
+  <input type="submit" value="Update">
+</form>
+
+
+</body>
+</html>

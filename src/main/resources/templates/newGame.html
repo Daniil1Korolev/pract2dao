@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/text.css}">
+</head>
+<body>
+<form th:method="POST" th:action="@{game}" th:object="${game}">
+  <label for="name">Введите название</label>
+  <input type="text" id="name" th:field="*{name}">
+  <label for="janr">Введите жанр</label>
+  <input type="text" id="janr" th:field="*{janr}">
+  <label for="novinka">Новинка?</label>
+  <input type="text" id="novinka" th:field="*{novinka}">
+  <label for="plata">Платно?</label>
+  <input type="text" id="plata" th:field="*{plata}">
+  <input type="submit" value="Create">
+</form>
+</body>
+</html>

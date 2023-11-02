@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/text.css}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>ID</h3>
+<p th:text="${person.getId()}"></p>
+<h3>Имя</h3>
+<p th:text="${person.getName()}"></p>
+<h3>Возраст</h3>
+<p th:text="${person.getAge()}"></p>
+<h3>Фамилия</h3>
+<p th:text="${person.getSurname()}"></p>
+<h3>Отчество</h3>
+<p th:text="${person.getMidname()}"></p>
+
+<a th:href="@{/{id}/edit(id = ${person.getId()})}" class="button">EDIT</a><br>
+<form th:method="DELETE" th:action="@{/{id}(id = ${person.getId()})}"><br>
+    <input type="submit" value="DELETE">
+</form>
+
+</body>
+</html>
